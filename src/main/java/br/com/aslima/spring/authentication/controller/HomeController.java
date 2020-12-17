@@ -9,6 +9,11 @@ public class HomeController {
 
 	@GetMapping
 	@RequestMapping("/")
+	public String defaultPath() {
+		return "redirect:home";
+	}
+	
+	@GetMapping("/home")
 	public String home() {
 		return "home";
 	}
